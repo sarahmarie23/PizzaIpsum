@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pizza Ipsum </title>
+    <link href="https://fonts.googleapis.com/css?family=Chango&display=swap" rel="stylesheet">
+  <style type="text/css">
+    html, body {
+        height: 100%;
+    }
+    * {
+        align-content: center;
+        font-family: 'Chango';
+    }
+    legend {
+        font-size: 30px;
+        
+    }
+    fieldset {
+        display: inline-block;
+        margin: 50px;
+        border-color: #eff6c5;
+        border-style: dashed;
+        border-width: 10px; 
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #e98800;
+    }
+    #middle {
+        float: left;
+        width: 50%;
+        padding: 0;
+        background-color: #7b2509;
+        height: 100%;
+        text-align: center;    
+    }  
+    #left { 
+        float: left;
+        width: 25%;
+        padding: 0;
+        background-image: url("pizzabg.jpeg");
+        height: 100%;
+    }  
+    #right { 
+        float: right;
+        width: 25%;
+        padding: 0;
+        background-image: url("pizzabg.jpeg");
+        height: 100%;
+    }   
+    #select {
+        font-size: 20px;
+        width: 100px;
+        padding: 5px;
+    }
+    #submit {
+        font-size: 20px;
+        transition-duration: 0.4s;
+        padding: 5px;
+        margin: 10px;
+    }
+    #submit:hover {
+        background-color: #eff6c5;
+    }
+    p {
+       padding: 50px;
+    }
+      
+  </style>
+  </head>
+  <body>
+  <div id="left"></div>  
+  <div id="middle">  
+       
+  	<form action="process_loremipsum.php" method="post">
+  		<fieldset ><legend>Pizza Ipsum Generator</legend>
+            <p>Are you in need of some pizza ipsum text? Select between 1 and 10 paragraphs below.</p>
+  		<label for="paragraphs" required></label>
+  		<input type="number" name="paragraphs" min="1" max="10" placeholder="select" id="select" required>
+  		<input type="submit" value="Submit" id="submit">
+  		</fieldset>
+  	</form>
+  </div>  
+  <div id="right"></div>  
+        
+  	</body>
+  	</html>
